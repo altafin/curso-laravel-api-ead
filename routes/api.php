@@ -29,6 +29,7 @@ Route::get('/lessons/{id}', [LessonController::class, 'show']);
 
 Route::get('/supports', [SupportController::class, 'index']);
 Route::post('/supports', [SupportController::class, 'store']);
+Route::post('/supports/{id}/replies', [SupportController::class, 'createReply']);
 
 //Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //    return $request->user();
